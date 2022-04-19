@@ -1,0 +1,37 @@
+.work {
+    padding-bottom: 94px;
+}
+
+.work__tittle {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--second-tittle-color);
+}
+
+.work-list {
+    display: flex;
+    position: relative;
+}
+
+.work-list__text {
+    bottom: 5px;
+    width: 370px;
+    height: 70px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
+    color: var(--first-tittle-color);
+}
+
+.work-list__item:not(:last-child) {
+    margin-right: 30px;
+}

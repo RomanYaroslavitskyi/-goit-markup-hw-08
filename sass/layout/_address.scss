@@ -1,0 +1,37 @@
+.address {
+    margin-top: 20px;
+}
+.address-list__item{
+    margin-bottom: 9px;
+}
+.address-list__item__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--first-tittle-color);
+    & {
+    margin-top: 9px;
+}
+}
+.address-list__mail-link,
+.address-list__tel-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--contacts-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+.address-list__mail-link:hover,
+.address-list__mail-link:focus {
+    color: var(--accent-color);
+}
+
+.address-list__tel-link:hover,
+.address-list__tel-link:focus {
+    color: var(--accent-color);
+}

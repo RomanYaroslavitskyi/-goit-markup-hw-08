@@ -1,0 +1,23 @@
+.footer {
+    min-height: 252px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: var(--basic-color);
+    &>.container {
+        display: flex;
+    }
+}
+
+
+
+.footer__logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--first-tittle-color);
+}
+
+.footer__logo__style {
+    color: var(--accent-color);
+}
