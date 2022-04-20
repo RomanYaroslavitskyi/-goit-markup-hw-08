@@ -7,15 +7,24 @@
 
 .contacts-icons-list {
     display: flex;
+    justify-content: center;
     & {
         margin-top: 20px;
     }
 }
 
 .contacts-icons {
-    width: 206px;
+
+  text-align: center;
     height: 80px;
+    margin-bottom: 60px; 
+     @include tablet {
+      margin-left: 165px;
+    }
+    @include desck-top {
     margin-left: 70px;
+    text-align: left;
+}
 }
 
 

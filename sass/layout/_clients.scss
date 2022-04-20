@@ -1,31 +1,58 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desck-top {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    }
+
 
 .clients__tittle {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     color: var(--second-tittle-color);
-    margin-bottom: 50px;
-
+    
+    @include desck-top {
+        font-size: 36px;
+        line-height: 1.16;
+        margin-bottom: 50px;
+    }
 }
 
 .clients-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+    @include desck-top {
+      justify-content: center;
+    
+    }
+    
 }
-
-.clients-list__item:not(:last-child) {
-    margin-right: 30px;
+.clients-list__item{
+   
+        width: calc(100% / 2 - 30px);
+        margin-right: 30px;
+        margin-bottom: 30px;
+    
+@include tablet {width: calc(100% / 3 - 30px);}
+    
+    @include desck-top {
+        margin-bottom: 0;
+        flex-wrap: nowrap;
+            width: calc(100% / 6 - 30px);
+    }
 }
 
 
 
 .clients-list__link {
-    width: 170px;
+    // max-width: 210px;
     height: 92px;
     border: 1px solid var(--icon);
     border-radius: 4px;
@@ -34,6 +61,8 @@
     align-items: center;
     fill: var(--icon);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    // @include tablet {max-width: 226px;}
+    // @include desck-top {width: 170px;}
 &:hover,
 &:focus {
     border: 1px solid var(--accent-color);

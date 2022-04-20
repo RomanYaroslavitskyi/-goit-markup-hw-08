@@ -1,16 +1,23 @@
 .footer {
-    min-height: 252px;
     padding-top: 60px;
     padding-bottom: 60px;
     background: var(--basic-color);
-    &>.container {
+    text-align: center;
+    &>.container  {
+        @include tablet {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;}
+        @include desck-top {
+        display: flex;
+        text-align: left;
+    }
     }
 }
 
 
 
-.footer__logo {
+.footer__logo { 
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
