@@ -32,6 +32,13 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -510,7 +517,14 @@ body {
 }
 
 .work {
+  display: none;
   padding-bottom: 94px;
+}
+
+@media screen and (min-width: 1200px) {
+  .work {
+    display: block;
+  }
 }
 
 .work__tittle {
@@ -527,7 +541,7 @@ body {
 }
 
 .work-list__text {
-  bottom: 5px;
+  bottom: 0;
   width: 370px;
   height: 70px;
   padding-top: 27px;
@@ -548,39 +562,76 @@ body {
 }
 
 .team {
-  min-height: 648px;
   background: var(--background-team);
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .team__tittle {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.16;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   color: var(--second-tittle-color);
 }
 
-.team-list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .team__tittle {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
 
 .team-list__item {
+  margin-bottom: 30px;
   background-color: var(--first-tittle-color);
-  max-width: 270px;
+  max-width: 450px;
   min-height: 368px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    width: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    max-width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    width: calc(100% / 4 - 30px);
+    margin-bottom: 0;
+    max-width: 270px;
+  }
 }
 
 .team-name {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-name {
+    padding-bottom: 30px;
+  }
 }
 
 .team-name__tittle {
@@ -599,7 +650,7 @@ body {
 }
 
 .icons-list {
-  margin: 16px 32px 0 32px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
 }

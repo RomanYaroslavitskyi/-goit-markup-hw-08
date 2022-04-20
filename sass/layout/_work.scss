@@ -1,5 +1,9 @@
 .work {
+    display: none;
     padding-bottom: 94px;
+    @include desck-top {
+    display: block;
+    }
 }
 
 .work__tittle {
@@ -16,7 +20,7 @@
 }
 
 .work-list__text {
-    bottom: 5px;
+    bottom: 0;
     width: 370px;
     height: 70px;
     padding-top: 27px;
