@@ -1,30 +1,71 @@
 .hero {
-    min-height: 600px;
+    // min-height: 600px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(to top,
+            rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-mobile-1x-min.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to top,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero-mobile-2x-min.jpg);
+        }
+    max-width: 1600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    margin-left: auto;
+    margin-right: auto;
+    @include tablet  {
+        background-image: linear-gradient(to top,
+            rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-tablet-1x-min.jpg);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero-tablet-2x-min.jpg);
+    }
+    }
+    @include desck-top {
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to top,
-            rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/logo.jpg);
-    width: 1600px;
-    background-repeat: no-repeat;
-    background-position: center;
-    block-size: cover;
-    margin-left: auto;
-    margin-right: auto;
+        rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-desck-top-1x-min.jpg);
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero-desck-top-2x-min.jpg);
+    }
+}
 }
 
 .hero__tittle {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    max-width: 696px;
+    max-width:360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
     color: var(--first-tittle-color);
+    @include desck-top {
+        font-size: 44px;
+        line-height: 1.36;
+        max-width: 696px;
+    }
 }
 
 .hero__btn {

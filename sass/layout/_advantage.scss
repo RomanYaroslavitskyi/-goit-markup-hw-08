@@ -1,16 +1,30 @@
 .advantage {
-    padding-top: 94px;
-    padding-bottom: 94px;
+padding-top: 60px;
+padding-bottom: 60px;
+    @include desck-top { 
+        padding-top: 94px;
+    padding-bottom: 94px;}
 }
 
 .advantage-list {
+   margin-bottom: -30px;
+@include tablet {
+    display: flex; 
     margin-right: -30px;
-    display: flex;
+    flex-wrap: wrap;
+}
 }
 
 .advantage-list__item {
-    width: calc (100% / 4 - 30);
+    margin-bottom: 30px;
+    
+    @include tablet{
+    width: calc(100% / 2 - 30px);
     margin-right: 30px;
+    }
+    @include desck-top {
+        width: calc(100% / 4 - 30px);
+    }
 }
 
 .advantage-icons {
@@ -30,6 +44,11 @@
     letter-spacing: 0.03em;
     color: var(--second-tittle-color);
     margin-bottom: 10px;
+    text-align: center;
+    @include tablet{
+        text-align: left;
+       
+    }
 }
 
 .advantage-list__item__sub-tittle {

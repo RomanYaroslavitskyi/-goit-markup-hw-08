@@ -1,4 +1,5 @@
 @import "./utils/_vars";
+@import"./utils/mixins";
 @import "./base/_reset";
 @import "./components/_container";
 @import "./base/_commo";
@@ -18,4 +19,5 @@
 @import "./components/_order-form.scss";
 @import "./components/_catalog.scss";
 @import "./layout/_projects.scss";
+
 
