@@ -2,15 +2,27 @@
     padding-top: 24px;
     padding-bottom: 25px;
     min-height: 80px;
-    border-bottom: 1px solid #ECECEC;
-.container,
+    border-bottom: 1px solid #ECECEC;}
+.header.container{
+    @include tablet {
+        display: flex;
+    align-items: center;}
+    @include desck-top { 
+        display: flex;
+    align-items: center;
+}
+}
+
 .navigation {
+    display:none;
+    @include tablet{
+       display: flex;
+    }
+    @include desck-top {
     display: flex;
     align-items: center;}}
 
-    .navigation {
-        display: none;
-    }
+   
 
 .header__logo {
     font-family: 'Raleway';
@@ -70,15 +82,19 @@
 }
 
 .connect {
-    display: flex;
-    margin-left: auto;
-   
+    
+     display: none;
+    
+    @include tablet {
+        display:flex;
+    flex-direction: column
+    }
+@include desck-top {
+     display: flex;
+     
+    margin-left: auto;}
 }
-.connect {
-    display: none;
-   
 
-}
 .connect__mail,
 .connect__tel {
     font-weight: 500;

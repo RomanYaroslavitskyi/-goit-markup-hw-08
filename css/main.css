@@ -87,14 +87,35 @@ body {
   border-bottom: 1px solid #ECECEC;
 }
 
-.header .container,
-.header .navigation {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .header.container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header.container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .navigation {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__logo {
@@ -154,12 +175,21 @@ body {
 }
 
 .connect {
-  display: flex;
-  margin-left: auto;
+  display: none;
 }
 
-.connect {
-  display: none;
+@media screen and (min-width: 768px) {
+  .connect {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .connect {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .connect__mail,
