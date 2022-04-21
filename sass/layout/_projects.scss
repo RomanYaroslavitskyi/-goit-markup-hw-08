@@ -1,7 +1,11 @@
 .projects-list {
     // display: flex;
     // flex-wrap: wrap;
-    margin-right: -30px;
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -30px;
+    }
     margin-bottom: -30px;
     
 }
@@ -9,11 +13,11 @@
 
 
 .projects-list__item {
-    flex-basis: calc(100% / 3 - 30px);
-    margin-right: 30px;
+    
+    max-width: 450px;
     margin-bottom: 30px;
     border: 1px solid var(--first-item-color);
-    width: 370px;
+   
     min-height: 404px;
     position: relative;
      &:hover{
@@ -27,6 +31,14 @@
             
             }
             }
+            @include tablet{
+            margin-right: 30px;
+            width: calc(100% / 2 - 30px);
+        max-width: 354px;}
+        @include desck-top{
+            width: calc(100% / 3 - 30px);
+            max-width: 370px;
+        } 
     }
 
 
@@ -53,11 +65,6 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
-}
-
-.projects-list__item:nth-last-child(3n+1) {
-    margin-right: 0;
-   
 }
 
 

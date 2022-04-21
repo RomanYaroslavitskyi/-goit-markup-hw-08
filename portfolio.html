@@ -17,7 +17,7 @@
 
 <body>
     <!--------------------------------- HEADER ------------->
-    <!-- <header class="header">
+    <header class="header">
         <div class="container">
             <a href="./index.html" class="header__logo logo link">
                 <span class="header__logo__style"> Web</span>Studio
@@ -28,7 +28,7 @@
                         <a href="./index.html" class="menu-list__link link ">Студия</a>
                     </li>
                     <li class=" menu-list__item ">
-                        <a href="./portfolio.html" class="menu-list__link link current">Портфолио </a>
+                        <a href="./portfolio.html" class="menu-list__link link current ">Портфолио </a>
                     </li>
                     <li class=" menu-list__item">
                         <a href="" class="menu-list__link link">Контакты </a>
@@ -49,11 +49,77 @@
                         </svg> +380961111111 </a>
                 </li>
             </ul>
+            <button class="header-btn" type="submit">
+                <svg width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu_40px-1"></use>
+                </svg>
+            </button>
         </div>
-    </header>  -->
+        <div class="mobile-menu is-hidden">
+            <div class="container">
+                <button class="mobile-menu-btn" type="submit">
+                    <svg width="40" height="40">
+                        <use href="./images/icons.svg#icon-close_40px-1"></use>
+                    </svg>
+                </button>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-list list">
+                        <li class=" mobile-list__item ">
+                            <a href="./index.html" class="mobile-list__link link current">Студия</a>
+                        </li>
+                        <li class=" mobile-list__item ">
+                            <a href="./portfolio.html" class="mobile-list__link link ">Портфолио </a>
+                        </li>
+                        <li class=" mobile-list__item">
+                            <a href="" class="mobile-list__link link">Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mob-adress">
+                    <ul class="mobile-connect-list list">
+    
+                        <li class="mobile-connect-list__item">
+                            <a href="Tel:+380961111111" class="mobile-connect-list__tel link ">
+                                +380961111111 </a>
+    
+                        </li>
+                        <li class="mobile-connect-list__item">
+                            <a href="mailto:info@devstudio.com" class="mobile-connect-list__mail link ">
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-soc-list list">
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link link">Instagram</a>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <span></span>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link link"> Twitter</a>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <span></span>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link link"> Facebook</a>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <span></span>
+                        </li>
+                        <li class="mob-soc-list__item">
+                            <a href="" class="mob-soc-list__link link"> LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    
+    </header>
     <!---------------------------CATALOG ---------------------------------------->
     <main>
-        <!-- <section class="catalog">
+         <section class="catalog">
             <div class="container">
                 <ul class="catalog-list list">
                     <li class="catalog-list__item"> 
@@ -71,12 +137,21 @@
                     <li class="catalog-list__item"> 
                         <button type="button" class="catalog-list__btn">Маркетинг</button>
                     </li>
-                </ul> -->
+                </ul> 
 <!-- ------------------------------PROGECT------------------------------- -->
                 <ul class="projects-list list">
                     <li class="projects-list__item">
                         <div class="projects-content">
-                        <img src="./images/portfolio1.jpg" alt="Технокряк" width=370>
+                            <picture>
+                                <source srcset="./images/compressjpgdesck-top-tehnokriak-1x.jpg 1x, ./images/compressjpgdesck-top-tehnokriak-2x.jpg 2x"
+                                    media="(min-width:1200px)">
+                                <source srcset="./images/compressjpgtablet-tehnokriak-1x.jpg 1x, ./images/compressjpgtablet-tehnokriak-2x.jpg 2x" 
+                                media="(min-width:768px)">
+                                <source srcset="./images/compressjpgmobile-tehnokriak-1x.jpg 1x, ./images/compressjpgmobile-tehnokriak-2x.jpg 2x" 
+                                media="(min-width:480px)">
+                                <img src="./images/compressjpgdesck-top-tehnokriak-1x.jpg 1x" alt="Технокряк">
+                            </picture>
+                        <!-- <img src="./images/portfolio1.jpg" alt="Технокряк" width=370> -->
                         <p class="projects-content__text">Ресурс предлагает комплексные предложения
                              с разным уровнем функционала и сервисов. Все это позволит 
                              посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -88,8 +163,17 @@
 
                     </li>
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgdesck-top-posterorlean-1x.jpg 1x, ./images/compressjpgdesck-top-posterorlean-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/compressjpgtablet-posterorlean-1x.jpg 1x, ./images/compressjpgtablet-posterorlean-2x.jpg 2x"
+                             media="(min-width:768px)">
+                            <source srcset="./images/compressjpgmobile-posterorlean-1x.jpg 1x, ./images/compressjpgmobile-posterorlean-2x.jpg 2x"
+                             media="(min-width:480px)">
+                        <img src=" ./images/compressjpgdesck-top-posterorlean-1x.jpg " alt="Постер New Orlean vs Golden Star" >
+                        </picture>
                          <div class="projects-content">
-                             <img src=" ./images/portfolio2.jpg " alt="Постер New Orlean vs Golden Star" width=370>
+                             <!-- <img src=" ./images/portfolio2.jpg " alt="Постер New Orlean vs Golden Star" width=370> -->
                          <p class="projects-content__text">Ресурс предлагает комплексные предложения 
                              с разным уровнем функционала и сервисов. Все это позволит посетителю 
                              получить исчерпывающие сведения о компании или частном лице.</p>
@@ -102,8 +186,15 @@
                     </li>
 
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgdesck-top-seafood-1x.jpg 1x, ./images/compressjpgdesck-top-seafood-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/compressjpgtablet-seafood-1x.jpg 1x, ./images/compressjpgtablet-seafood-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/compressjpgmobile-seafood-1x.jpg 1x, ./images/compressjpgmobile-seafood-2x.jpg 2x" media="(min-width:480px)">
+                            <img src="./images/compressjpgdesck-top-seafood-1x.jpg" alt="Ресторан Seafood" >
+                        </picture>
                         <div class="projects-content">
-                            <img src="./images/portfolio3.jpg" alt="Ресторан Seafood" width=370>
+                            <!-- <img src="./images/portfolio3.jpg" alt="Ресторан Seafood" width=370> -->
                             <p class="projects-content__text">Ресурс предлагает комплексные 
                                 предложения с разным уровнем функционала и сервисов. Все это позволит
                                  посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -115,8 +206,15 @@
                     </li>
 
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgdesck-top-prime-1x.jpg 1x, ./images/compressjpgdesck-top-prime-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/compressjpgtablet-prime-1x.jpg 1x, ./images/compressjpgtablet-prime-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/compressjpgmobile-prime-1x.jpg 1x, ./images/compressjpgmobile-prime-2x.jpg 2x" media="(min-width:480px)">
+                            <img src=" ./images/compressjpgdesck-top-prime-1x.jpg " alt=" Проект Prime" >
+                        </picture>
                         <div class="projects-content"> 
-                            <img src=" ./images/portfolio4.jpg " alt=" Проект Prime" width=370>
+                            <!-- <img src=" ./images/portfolio4.jpg " alt=" Проект Prime" width=370> -->
                         <p class="projects-content__text">Ресурс предлагает комплексные 
                             предложения с разным уровнем функционала и сервисов. Все это позволит
                              посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -128,8 +226,15 @@
                     </li>
 
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgtablet-boxes-1x.jpg 1x, ./images/compressjpgtablet-boxes-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/compressjpgdesck-top-boxes-1x.jpg 1x, ./images/compressjpgdesck-top-boxes-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/compressjpgmobile-boxes-1x.jpg 1x, ./images/compressjpgmobile-boxes-2x.jpg 2x" media="(min-width:480px)">
+                            <img src="./images/compressjpgtablet-boxes-1x.jpg" alt="Проект Boxes">
+                        </picture>
                         <div class="projects-content">
-                            <img src="./images/portfolio5.jpg" alt="Проект Boxes" width=370>
+                            <!-- <img src="./images/portfolio5.jpg" alt="Проект Boxes" width=370> -->
                         <p class="projects-content__text">Ресурс предлагает комплексные
                              предложения с разным уровнем функционала и сервисов. Все 
                              это позволит посетителю получить исчерпывающие сведения о 
@@ -141,8 +246,15 @@
                         </div>
                     </li> 
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgdesck-top-inspiration-1x.jpg 1x, ./images/compressjpgdesck-top-inspiration-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/compressjpgtablet-inspiration-1x.jpg 1x, ./images/compressjpgtablet-inspiration-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/compressjpgmobile-inspiration-1x.jpg 1x, ./images/compressjpgmobile-inspiration-2x.jpg 2x" media="(min-width:480px)">
+                            <img src=" ./images/compressjpgdesck-top-inspiration-1x.jpg " alt="Веб-сайт ">
+                        </picture>
                     <div class="projects-content">
-                        <img src=" ./images/portfolio6.jpg " alt="Веб-сайт " width=370>
+                        <!-- <img src=" ./images/portfolio6.jpg " alt="Веб-сайт " width=370> -->
                     <p class="projects-content__text">Ресурс предлагает комплексные
                          предложения с разным уровнем функционала и сервисов. Все это
                           позволит посетителю получить исчерпывающие сведения
@@ -155,8 +267,15 @@
                     </li>
 
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgdesck-top-limitededition-1x.jpg 1x, ./images/compressjpgdesck-top-limitededition-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/tablet-team-igor-1x.jpg 1x, ./images/tablet-team-igor-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/compressjpgmobile-limitededition-1x.jpg 1x, ./images/compressjpgmobile-limitededition-2x.jpg 2x" media="(min-width:480px)">
+                            <img src="./images/compressjpgdesck-top-limitededition-1x.jpg" alt="Издание Limited Edition">
+                        </picture>
                         <div class="projects-content">
-                            <img src="./images/portfolio7.jpg" alt="Издание Limited Edition" width=370>
+                            <!-- <img src="./images/portfolio7.jpg" alt="Издание Limited Edition" width=370> -->
                         <p class="projects-content__text">Ресурс предлагает 
                             комплексные предложения с разным уровнем функционала и
                              сервисов. Все это позволит посетителю получить исчерпывающие
@@ -169,8 +288,15 @@
                     </li>
 
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgdesck-top-lab-1x.jpg 1x, ./images/compressjpgdesck-top-lab-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/compressjpgtablet-lab-1x.jpg 1x, ./images/compressjpgtablet-lab-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/compressjpgmobile-lab-1x.jpg 1x, ./images/compressjpgmobile-lab-2x.jpg 2x" media="(min-width:480px)">
+                            <img src=" ./images/compressjpgdesck-top-lab-1x.jpg " alt="Проект LAB" >
+                        </picture>
                         <div class="projects-content">
-                            <img src=" ./images/portfolio8.jpg " alt="Проект LAB" width=370>
+                            <!-- <img src=" ./images/portfolio8.jpg " alt="Проект LAB" width=370> -->
                             <p class="projects-content__text">Ресурс предлагает комплексные
                                  предложения с разным уровнем функционала и сервисов. Все это
                                   позволит посетителю получить исчерпывающие сведения о компании
@@ -184,8 +310,15 @@
                     </li>
 
                     <li class="projects-list__item">
+                        <picture>
+                            <source srcset="./images/compressjpgdesck-top-growingbusiness-1x.jpg 1x, ./images/compressjpgdesck-top-growingbusiness-2x.jpg 2x"
+                                media="(min-width:1200px)">
+                            <source srcset="./images/tablet-team-igor-1x.jpg 1x, ./images/compressjpgtablet-growingbusiness-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/compressjpgtablet-growingbusiness-1x.jpg 1x, ./images/compressjpgmobile-growingbusiness-2x.jpg 2x" media="(min-width:480px)">
+                            <img src="./images/compressjpgdesck-top-growingbusiness-1x.jpg" alt="Growing Business">
+                        </picture>
                         <div class="projects-content">
-                            <img src="./images/portfolio9.jpg" alt="Growing Business" width=370>
+                            <!-- <img src="./images/portfolio9.jpg" alt="Growing Business" width=370> -->
                             <p class="projects-content__text">Ресурс предлагает комплексные 
                                 предложения с разным уровнем функционала и сервисов. Все это 
                                 позволит посетителю получить исчерпывающие сведения о компании
@@ -202,7 +335,7 @@
 
     </main>
     <!-----------------------------FOOTER-CONTACTS---------------->
-    <!-- <footer class="footer">
+     <footer class="footer">
         <div class=" container">
             <div class="contact">
                 <a href="./index.html" class="footer__logo link">
@@ -230,7 +363,7 @@
                 </address>
             </div> 
             <!-- ------------------------------------FOOTER-CONTACTS-ICONS-------------------- --------- -->
-            <!-- <div class="contacts-icons">
+             <div class="contacts-icons">
                 <h2 class="contacts-icons__tittle">присоединяйтесь</h2>
                 <ul class="contacts-icons-list list">
                     <li class="contacts-icons-list__item">
@@ -261,9 +394,9 @@
                                 </use>
                             </svg></a>
                     </li>
-            <!-- </div>
+             </div>
             <!-- --------------------------------SUBSCRIBE------------------------------- -->
-            <!-- <div class="subscribe">
+             <div class="subscribe">
                 <form class="subscribe-form ">
                     <div class="subscribe-mail">
                         <label for="subscribe-mail" class="subscribe-mail__label">Подпишитесь на рассылку</label>
@@ -278,7 +411,7 @@
                 </form>
             </div>
         </div>
-    </footer> --> 
+    </footer> 
 </body>
 
 </html>

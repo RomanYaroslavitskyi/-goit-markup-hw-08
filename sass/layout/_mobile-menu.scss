@@ -1,0 +1,118 @@
+.mobile-menu-btn{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+    
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+}}
+.mobile-menu {
+    @include tablet{
+        display: none;
+    }
+    & .container{
+        padding: 48px 84px 48px 40px;    
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--first-tittle-color);
+    & .is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    
+    }
+}
+.mobile-menu-btn {}
+
+.mobile-menu__nav {}
+
+.mobile-list {}
+.mobile-list__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-list__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #212121;
+}
+.current {
+    color: var(--accent-color);
+}
+
+.mobile-connect-list {
+
+}
+
+.mobile-connect-list__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-connect-list__mail {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    
+    color: #757575;
+   }
+
+.mobile-connect-list__tel {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    /* identical to box height */
+    
+    letter-spacing: 0.02em;
+    
+    color: #2196F3;
+}
+
+.mob-soc-list {
+    display: flex;
+    margin-top: 64px;
+
+    &__item {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    
+    letter-spacing: 0.02em;
+    
+    color: #2196F3;
+
+        & span {
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            transform: rotate(90deg);
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__link {
+        color: var(--accent-color);
+    }
+}

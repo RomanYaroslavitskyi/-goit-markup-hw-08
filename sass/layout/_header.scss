@@ -1,12 +1,24 @@
 .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 80px;
+    border-bottom: 1px solid #ECECEC;
+@include tablet {
+    padding-top: 21px;
+    padding-bottom: 21px;
+}
+@include desck-top {
     padding-top: 24px;
     padding-bottom: 25px;
-    min-height: 80px;
-    border-bottom: 1px solid #ECECEC;}
-.header.container{
+}}
+
+.header .container{
+    display: flex;
+     
     @include tablet {
         display: flex;
-    align-items: center;}
+   align-items: center;
+}
     @include desck-top { 
         display: flex;
     align-items: center;
@@ -17,6 +29,7 @@
     display:none;
     @include tablet{
        display: flex;
+       margin-right: 84px;
     }
     @include desck-top {
     display: flex;
@@ -62,7 +75,8 @@
 
 .current {
     position: relative;
-&:after {
+    @include tablet{
+&::after {
     display: block;
     content: "";
     width: 100%;
@@ -72,7 +86,7 @@
     background-color: var(--accent-color);
     color: var(--accent-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+}}
 }
 
 
@@ -87,11 +101,11 @@
     
     @include tablet {
         display:flex;
-    flex-direction: column
+    flex-direction: column;
     }
 @include desck-top {
      display: flex;
-     
+    flex-direction: row;
     margin-left: auto;}
 }
 
@@ -120,4 +134,16 @@
 .connect__tel:hover,
 .connect__tel:focus {
     color: var(--accent-color);
+}
+.header-btn{
+    @include tablet{
+        display: none;
+    }
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    &:hover,
+    &:focus{
+        fill: var(--accent-color);
+    }
 }

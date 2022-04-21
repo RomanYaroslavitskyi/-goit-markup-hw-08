@@ -18,7 +18,7 @@
 }
 
 .wrap__input {
-    width: 448px;
+    width: 100%;
     height: 40px;
     border: 1px solid var(--border-color-one);
     box-sizing: border-box;
@@ -49,7 +49,7 @@
     margin-top: 4px;
     padding-left: 16px;
     padding-top: 12px;
-    width: 448px;
+    width: 100%;
     height: 120px;
     border: 1px solid var(--border-color-one);
     box-sizing: border-box;
@@ -68,7 +68,12 @@
     margin-top: 20px;
     margin-bottom: 30px;
     width: 100%;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
+    @include desck-top {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .license__icon {

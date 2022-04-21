@@ -1,16 +1,26 @@
 .catalog {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desck-top {
     padding-top: 94px;
-    padding-bottom: 94px;
+    padding-bottom: 94px;}
 }
 
 .catalog-list {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: center
+    flex-wrap: wrap;
+    @include tablet {
+        flex-wrap: nowrap;
+    justify-content: center;}
+    @include desck-top {
+        margin-bottom: 50px;
+    }
 }
 
 .catalog-list__item:not(:last-child) {
     margin-right: 8px;
+    margin-bottom: 15px;
 }
 
 
